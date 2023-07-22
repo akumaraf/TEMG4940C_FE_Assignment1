@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Management Tool</title>
+    <link rel="stylesheet" type="text/css" href="frontend1.css">
+</head>
+<body>
+    <h1>Task Management Tool</h1>
+    <div class="search-bar">
+        <label for="search"><i class="fas fa-search"></i></label>
+        <input type="text" id="search" name="search" placeholder="Search cards">
+    </div>
+    <div class="board">
+        <div class="column todo">
+            <h3>To Do
+                <button class="add-card"><i class="fas fa-plus"></i> Add To Do</button>
+            </h3>
+        </div>
+        <div class="column in-progress">
+            <h3>In Progress</h3>
+        </div>
+        <div class="column archived">
+            <h3>Archived</h3>
+        </div>
+    </div>
+
+    <div id="card-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>Add New To Do</h4>
+            <form>
+                <label for="card-title">Title:</label>
+                <input type="text" id="card-title" name="title" required>
+                <label for="card-description">Description:</label>
+                <textarea id="card-description" name="description"></textarea>
+                <input type="submit" value="Add Card">
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>Edit Card</h4>
+            <form>
+                <label for="edit-title">Title:</label>
+                <input type="text" id="edit-title" name="title" required>
+                <label for="edit-description">Description:</label>
+                <textarea id="edit-description" name="description"></textarea>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="frontend1.js"></script>
+</body>
+</html>
